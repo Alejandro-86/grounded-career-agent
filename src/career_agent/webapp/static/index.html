@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Grounded Career Agent</title>
+<style>
+  body{font-family:system-ui,Helvetica,Arial,sans-serif;max-width:960px;margin:24px auto;padding:0 16px;color:#1a1a1a}
+  textarea{width:100%;height:170px;font:13px/1.4 ui-monospace,Menlo,monospace}
+  button{padding:8px 16px;font-size:14px;cursor:pointer}
+  table{border-collapse:collapse;width:100%;margin-top:12px;font-size:13px}
+  td,th{border-bottom:1px solid #ddd;padding:6px;text-align:left;vertical-align:top}
+  .match{color:#0a7d33;font-weight:600}.partial{color:#b26a00;font-weight:600}.gap{color:#b00020;font-weight:600}
+  .viol{color:#666;font-size:12px}.score{font-size:22px;font-weight:700}
+  label{margin-left:12px;font-size:13px}
+</style>
+</head>
+<body>
+<h1>Grounded Career Agent</h1>
+<p>Paste a job description (bulleted requirements). Every verdict and CV bullet must trace to the candidate profile.</p>
+<input id="title" value="Senior Data Engineer" size="40">
+<label><input type="checkbox" id="guard" checked> grounding guardrail</label>
+<br><br>
+<textarea id="jd">Senior Data Engineer at Example Co
+Requirements:
+- Hands-on Spark and Databricks pipelines
+- Kafka event streaming
+- Production Go services
+- Retrieval-augmented generation pipelines
+Nice to have:
+- Snowflake experience</textarea>
+<br><button onclick="run()">Analyse</button>
+<div id="out"></div>
+<script>
+async function run(){
+  const out=document.getElementById('out'); out.textContent='Working...';
+  const r=await fetch('/analyze',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({title:title.value,jd_text:jd.value,guardrail:guard.checked})});
+  if(!r.ok){out.textContent='Error: '+(await r.text());return}
+  const {result}=await r.json();
+  const byId=Object.fromEntries(result.requirements.map(q=>[q.id,q]));
+  const esc=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+  let h=`<p class="score">Fit ${(result.score*100).toFixed(0)}%</p>
+    <p>model <code>${esc(result.llm_model)}</code> | guardrail ${result.guardrail_enabled?'on':'OFF'} |
+    <a href="/runs/${result.run_id}/cv" target="_blank">tailored CV</a> |
+    <a href="/runs/${result.run_id}/report" target="_blank">report</a></p>
+    <table><tr><th>Requirement</th><th>Verdict</th><th>Evidence</th><th>Guardrail</th></tr>`;
+  for(const m of result.matches){
+    const q=byId[m.requirement_id];
+    const note=m.violations.length?`claimed ${m.claimed_verdict}: ${esc([...new Set(m.violations)].join('; '))}`:'';
+    h+=`<tr><td>${esc(q.text)}${q.must_have?'':' <i>(nice)</i>'}</td><td class="${m.verdict}">${m.verdict}</td>
+        <td>${esc(m.fact_ids.join(', ')||'none')}</td><td class="viol">${note}</td></tr>`;
+  }
+  h+='</table><h3>CV bullets</h3><ul>'+result.bullets.map(b=>`<li>${esc(b.text)} <small>[${esc(b.fact_ids.join(', '))}]</small></li>`).join('')+'</ul>';
+  out.innerHTML=h;
+}
+</script>
+</body>
+</html>

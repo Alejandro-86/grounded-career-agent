@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.idea/
+.vscode/
+.DS_Store
+
+# runtime artifacts
+warehouse/
+mlflow.db
+mlruns/
+metastore_db/
+spark-warehouse/
+derby.log

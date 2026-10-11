@@ -1,0 +1,140 @@
+{
+  "name": "Sam Okafor",
+  "headline": "Senior Data Engineer (fictional demo profile)",
+  "declared_gaps": ["azure", "go", "rust", "scala", "java", "flink", "snowflake", "customer-facing"],
+  "facts": [
+    {
+      "id": "f01",
+      "text": "Built and ran Spark batch pipelines on Databricks processing ~4 TB/day for a retail analytics platform, writing to Delta tables.",
+      "skills": ["spark", "databricks", "delta-lake", "python", "sql"],
+      "evidence": "production",
+      "metrics": ["4 TB/day"]
+    },
+    {
+      "id": "f02",
+      "text": "Led migration of 120 Airflow DAGs to generated DAGs, cutting authoring time by 60%.",
+      "skills": ["airflow", "python"],
+      "evidence": "production",
+      "metrics": ["120 DAGs", "60%"]
+    },
+    {
+      "id": "f03",
+      "text": "Designed Kafka event streaming with schema registry and dead-letter queues, sustaining 25k events/s.",
+      "skills": ["kafka", "python"],
+      "evidence": "production",
+      "metrics": ["25k events/s"]
+    },
+    {
+      "id": "f04",
+      "text": "Owned a dbt project of 300 models on BigQuery with CI-enforced tests.",
+      "skills": ["dbt", "sql", "bigquery", "ci-cd"],
+      "evidence": "production",
+      "metrics": ["300 models"]
+    },
+    {
+      "id": "f05",
+      "text": "Managed GCP infrastructure (BigQuery, Cloud Run, GCS) as Terraform across 3 environments.",
+      "skills": ["terraform", "gcp", "bigquery"],
+      "evidence": "production",
+      "metrics": ["3 environments"]
+    },
+    {
+      "id": "f06",
+      "text": "Led a team of 5 engineers: mentoring, code review and delivery planning.",
+      "skills": ["leadership"],
+      "evidence": "production",
+      "metrics": ["5 engineers"]
+    },
+    {
+      "id": "f07",
+      "text": "Shipped an LLM document-extraction agent to production with schema validation, bounded self-correction and an evaluation set, reaching 92% field-level accuracy.",
+      "skills": ["llm", "agents", "evals", "python"],
+      "evidence": "production",
+      "metrics": ["92%"]
+    },
+    {
+      "id": "f08",
+      "text": "Built a RAG pipeline over 1,500 biomedical abstracts with a vector store and a code-enforced citation guardrail (portfolio project).",
+      "skills": ["rag", "llm", "python"],
+      "evidence": "portfolio",
+      "metrics": ["1,500 abstracts"]
+    },
+    {
+      "id": "f09",
+      "text": "Built a read-only MCP server exposing literature search to LLM clients, 28 tests (portfolio project).",
+      "skills": ["mcp", "llm", "python", "fastapi"],
+      "evidence": "portfolio",
+      "metrics": ["28 tests"]
+    },
+    {
+      "id": "f10",
+      "text": "Built a LangGraph duplicate-ticket detector evaluated on a public benchmark (portfolio project).",
+      "skills": ["langgraph", "agents", "llm", "evals"],
+      "evidence": "portfolio",
+      "metrics": []
+    },
+    {
+      "id": "f11",
+      "text": "Containerised services with Docker and automated build, test and deploy with GitHub Actions.",
+      "skills": ["docker", "ci-cd"],
+      "evidence": "production",
+      "metrics": []
+    },
+    {
+      "id": "f12",
+      "text": "Added Prometheus and Grafana monitoring with SLO-based alerting to data pipelines.",
+      "skills": ["observability"],
+      "evidence": "production",
+      "metrics": []
+    },
+    {
+      "id": "f13",
+      "text": "Designed PostgreSQL schemas and tuned queries, cutting p95 latency from 1.8s to 300ms.",
+      "skills": ["postgresql", "sql"],
+      "evidence": "production",
+      "metrics": ["1.8s", "300ms"]
+    },
+    {
+      "id": "f14",
+      "text": "Loaded data into Neo4j and wrote basic Cypher queries; not a specialism.",
+      "skills": ["neo4j"],
+      "evidence": "adjacent",
+      "metrics": []
+    },
+    {
+      "id": "f15",
+      "text": "Ported a lakehouse reconciliation platform to Delta Lake and logged runs to MLflow, 34 tests (portfolio project).",
+      "skills": ["delta-lake", "spark", "mlflow"],
+      "evidence": "portfolio",
+      "metrics": ["34 tests"]
+    },
+    {
+      "id": "f16",
+      "text": "Built AWS ETL on S3, Lambda and Glue for two years.",
+      "skills": ["aws", "python"],
+      "evidence": "production",
+      "metrics": ["two years"]
+    },
+    {
+      "id": "f17",
+      "text": "Served ML features through a containerised FastAPI service.",
+      "skills": ["fastapi", "python", "docker"],
+      "evidence": "production",
+      "metrics": []
+    },
+    {
+      "id": "f18",
+      "text": "Built an Iceberg and Trino medallion lakehouse with reconciliation controls, 111 tests (portfolio project).",
+      "skills": ["iceberg", "trino", "sql"],
+      "evidence": "portfolio",
+      "metrics": ["111 tests"]
+    },
+    {
+      "id": "f19",
+      "text": "Deployed services to Kubernetes using Helm charts maintained by the platform team; did not operate clusters.",
+      "skills": ["kubernetes"],
+      "evidence": "adjacent",
+      "metrics": []
+    }
+  ]
+}

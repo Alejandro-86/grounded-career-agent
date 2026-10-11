@@ -1,0 +1,327 @@
+{
+  "_comment": "Fictional JDs. 'gold' is the hand-assigned correct verdict for the demo profile under the evidence ladder: match needs production evidence covering every named skill.",
+  "jds": [
+    {
+      "id": "northwind",
+      "title": "Senior Data Engineer",
+      "company": "Northwind Analytics",
+      "requirements": [
+        {
+          "text": "Hands-on Spark and Databricks pipelines processing large data volumes",
+          "must_have": true,
+          "gold": "match"
+        },
+        {
+          "text": "Strong SQL and data modelling",
+          "must_have": true,
+          "gold": "match"
+        },
+        {
+          "text": "Pipeline orchestration with Airflow",
+          "must_have": true,
+          "gold": "match"
+        },
+        {
+          "text": "Delta Lake table design",
+          "must_have": true,
+          "gold": "match"
+        },
+        {
+          "text": "Kafka event streaming",
+          "must_have": true,
+          "gold": "match"
+        },
+        {
+          "text": "Infrastructure as code with Terraform on GCP",
+          "must_have": true,
+          "gold": "match"
+        },
+        {
+          "text": "Mentoring junior engineers",
+          "must_have": true,
+          "gold": "match"
+        },
+        {
+          "text": "Snowflake experience",
+          "must_have": false,
+          "gold": "gap"
+        },
+        {
+          "text": "MLflow experiment tracking",
+          "must_have": false,
+          "gold": "partial"
+        }
+      ]
+    },
+    {
+      "id": "helix",
+      "title": "AI Platform Engineer",
+      "company": "Helix Therapeutics",
+      "requirements": [
+        {
+          "text": "Production LLM agents with structured output validation",
+          "must_have": true,
+          "gold": "match"
+        },
+        {
+          "text": "Building evaluation frameworks for LLM systems",
+          "must_have": true,
+          "gold": "match"
+        },
+        {
+          "text": "Retrieval-augmented generation pipelines",
+          "must_have": true,
+          "gold": "partial"
+        },
+        {
+          "text": "Model Context Protocol servers",
+          "must_have": true,
+          "gold": "partial"
+        },
+        {
+          "text": "LangGraph for workflow orchestration",
+          "must_have": true,
+          "gold": "partial"
+        },
+        {
+          "text": "Python services with FastAPI",
+          "must_have": true,
+          "gold": "match"
+        },
+        {
+          "text": "Docker and CI/CD pipelines",
+          "must_have": true,
+          "gold": "match"
+        },
+        {
+          "text": "Kubernetes cluster operations",
+          "must_have": true,
+          "gold": "partial"
+        },
+        {
+          "text": "Azure deployments",
+          "must_have": false,
+          "gold": "gap"
+        },
+        {
+          "text": "Graph databases such as Neo4j",
+          "must_have": false,
+          "gold": "partial"
+        }
+      ]
+    },
+    {
+      "id": "brightwave",
+      "title": "Backend Data Engineer",
+      "company": "Brightwave Payments",
+      "requirements": [
+        {
+          "text": "Production Go services",
+          "must_have": true,
+          "gold": "gap"
+        },
+        {
+          "text": "Scala for Spark jobs",
+          "must_have": true,
+          "gold": "partial"
+        },
+        {
+          "text": "Apache Flink stream processing",
+          "must_have": true,
+          "gold": "gap"
+        },
+        {
+          "text": "Kafka at scale",
+          "must_have": true,
+          "gold": "match"
+        },
+        {
+          "text": "PostgreSQL performance tuning",
+          "must_have": true,
+          "gold": "match"
+        },
+        {
+          "text": "AWS data services such as S3 and Lambda",
+          "must_have": true,
+          "gold": "match"
+        },
+        {
+          "text": "Customer-facing technical consulting",
+          "must_have": true,
+          "gold": "gap"
+        },
+        {
+          "text": "Rust",
+          "must_have": false,
+          "gold": "gap"
+        },
+        {
+          "text": "Prometheus and Grafana dashboards",
+          "must_have": false,
+          "gold": "match"
+        }
+      ]
+    },
+    {
+      "id": "cobalt",
+      "title": "Analytics Engineer",
+      "company": "Cobalt Insights",
+      "requirements": [
+        {
+          "text": "dbt modelling on BigQuery",
+          "must_have": true,
+          "gold": "match"
+        },
+        {
+          "text": "Advanced SQL",
+          "must_have": true,
+          "gold": "match"
+        },
+        {
+          "text": "Airflow orchestration",
+          "must_have": true,
+          "gold": "match"
+        },
+        {
+          "text": "Google Cloud data services",
+          "must_have": true,
+          "gold": "match"
+        },
+        {
+          "text": "Apache Iceberg table format",
+          "must_have": true,
+          "gold": "partial"
+        },
+        {
+          "text": "Trino query engine",
+          "must_have": true,
+          "gold": "partial"
+        },
+        {
+          "text": "Stakeholder management with business teams",
+          "must_have": true,
+          "gold": "gap"
+        },
+        {
+          "text": "Snowflake",
+          "must_have": false,
+          "gold": "gap"
+        },
+        {
+          "text": "MLflow",
+          "must_have": false,
+          "gold": "partial"
+        }
+      ]
+    },
+    {
+      "id": "orbit",
+      "title": "Senior AI Engineer",
+      "company": "Orbit Labs",
+      "requirements": [
+        {
+          "text": "Retrieval-augmented generation systems",
+          "must_have": true,
+          "gold": "partial"
+        },
+        {
+          "text": "LLM evals and regression testing",
+          "must_have": true,
+          "gold": "match"
+        },
+        {
+          "text": "Agentic workflows with tool use",
+          "must_have": true,
+          "gold": "match"
+        },
+        {
+          "text": "Python and FastAPI",
+          "must_have": true,
+          "gold": "match"
+        },
+        {
+          "text": "Cloud deployment on Azure",
+          "must_have": true,
+          "gold": "gap"
+        },
+        {
+          "text": "Monitoring and alerting for LLM applications",
+          "must_have": true,
+          "gold": "match"
+        },
+        {
+          "text": "Customer-facing delivery",
+          "must_have": true,
+          "gold": "gap"
+        },
+        {
+          "text": "Graph databases such as Neo4j",
+          "must_have": false,
+          "gold": "partial"
+        },
+        {
+          "text": "Kubernetes",
+          "must_have": false,
+          "gold": "partial"
+        }
+      ]
+    },
+    {
+      "id": "meridian",
+      "title": "Platform Data Engineer",
+      "company": "Meridian Bank",
+      "requirements": [
+        {
+          "text": "Terraform on GCP",
+          "must_have": true,
+          "gold": "match"
+        },
+        {
+          "text": "Kubernetes experience operating clusters",
+          "must_have": true,
+          "gold": "partial"
+        },
+        {
+          "text": "Docker containers",
+          "must_have": true,
+          "gold": "match"
+        },
+        {
+          "text": "Python data pipelines in production",
+          "must_have": true,
+          "gold": "match"
+        },
+        {
+          "text": "Java services",
+          "must_have": true,
+          "gold": "gap"
+        },
+        {
+          "text": "Observability for data platforms",
+          "must_have": true,
+          "gold": "match"
+        },
+        {
+          "text": "AWS Glue ETL",
+          "must_have": true,
+          "gold": "match"
+        },
+        {
+          "text": "Team lead experience",
+          "must_have": true,
+          "gold": "match"
+        },
+        {
+          "text": "Rust",
+          "must_have": false,
+          "gold": "gap"
+        },
+        {
+          "text": "Apache Flink",
+          "must_have": false,
+          "gold": "gap"
+        }
+      ]
+    }
+  ]
+}
